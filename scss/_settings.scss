@@ -1,0 +1,26 @@
+$pink: #ff52c1;
+$pale-cyan: #edfbff;
+$dark-cyan: #00252e;
+$gray: #808e9a;
+$white: #fff;
+$content-width: 1280px;
+
+@mixin button($background: $pink, $color: $white) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50px;
+  min-height: 56px;
+  width: 280px;
+  max-width: 100%;
+  padding: 12px 24px;
+  background: $background;
+  color: $color;
+  box-shadow: 0 3px 9px #0002;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+

@@ -1,0 +1,12 @@
+{
+  "name": "huddle",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "sass --no-source-map scss/main.scss css/main.css",
+    "watch": "sass --watch --no-source-map scss/main.scss:css/main.css"
+  },
+  "devDependencies": {
+    "sass": "1.106.1"
+  }
+}

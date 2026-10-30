@@ -1,0 +1,106 @@
+@use "settings" as s;
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: s.$dark-cyan;
+  background: s.$white;
+}
+h1,
+h2 {
+  margin: 0 0 20px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+}
+p {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: inherit;
+}
+button {
+  font: inherit;
+}
+:focus-visible {
+  outline: 3px solid s.$pink;
+  outline-offset: 5px;
+}
+.container {
+  width: min(calc(100% - 160px), s.$content-width);
+  margin-inline: auto;
+}
+.button {
+  @include s.button;
+}
+.button:hover {
+  background: #ff9bdb;
+}
+.button--light {
+  @include s.button(s.$white, s.$dark-cyan);
+  width: 200px;
+  min-height: 48px;
+}
+.button--light:hover {
+  background: s.$white;
+  color: s.$gray;
+}
+.button--large {
+  width: 400px;
+  min-height: 80px;
+  font-size: 20px;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 1;
+}
+button:disabled:hover {
+  background: s.$pink;
+}
+@media (max-width: 900px) {
+  .container {
+    width: calc(100% - 64px);
+  }
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    width: calc(100% - 32px);
+  }
+  .button {
+    width: 240px;
+    min-height: 40px;
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+  .button--light {
+    width: 96px;
+    min-height: 24px;
+    padding: 4px 12px;
+    font-size: 10px;
+  }
+  .button--large {
+    width: 200px;
+    min-height: 40px;
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
